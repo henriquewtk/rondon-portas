@@ -840,3 +840,94 @@ a {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Galeria com fotos reais dos trabalhos */
+.projeto-visual {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: #e8dfcf;
+}
+
+.projeto-imagem {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.projeto:hover .projeto-imagem {
+  transform: scale(1.04);
+}
+
+.projeto-numero {
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .portfolio-grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .projeto-visual {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+
+.foto-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(25, 20, 15, 0.9);
+  cursor: zoom-out;
+}
+
+.foto-modal-imagem {
+  display: block;
+  max-width: 100%;
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  cursor: default;
+}
+
+.foto-modal-fechar {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 42px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+
+.contato-whatsapp a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 22px;
+  border-radius: 4px;
+  background-color: #25d366;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.contato-whatsapp a:hover {
+  background-color: #1da851;
+}
